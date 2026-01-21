@@ -2,15 +2,247 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hello from GitHub Pages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP Lab Reports</title>
   <style>
-    body { font-family: system-ui, sans-serif; text-align: center; padding: 80px 20px; background: #0f0f23; color: #e0e0ff; }
-    h1   { color: #44ff88; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
+      color: #e0e0ff;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    
+    header p {
+      color: #e0e7ff;
+      font-size: 1.1rem;
+    }
+    
+    nav {
+      background: #0f0f23;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 2px solid #3b82f6;
+    }
+    
+    nav a {
+      color: #44ff88;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    nav a:hover {
+      color: #fff;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    
+    .section {
+      background: rgba(30, 58, 138, 0.2);
+      border: 2px solid #3b82f6;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    
+    .section h2 {
+      color: #44ff88;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #44ff88;
+      padding-bottom: 0.5rem;
+    }
+    
+    .lab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .lab-card {
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid #3b82f6;
+      border-radius: 6px;
+      padding: 1.5rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    
+    .lab-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(68, 255, 136, 0.2);
+      border-color: #44ff88;
+    }
+    
+    .lab-card h3 {
+      color: #44ff88;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+    
+    .lab-card p {
+      color: #c0c0e0;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    
+    .lab-date {
+      color: #a0a0d0;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: #3b82f6;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    
+    .btn:hover {
+      background: #44ff88;
+      color: #0f0f23;
+    }
+    
+    footer {
+      background: #0f0f23;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 2px solid #3b82f6;
+      margin-top: 3rem;
+      color: #a0a0d0;
+    }
+    
+    footer p {
+      margin: 0.5rem 0;
+    }
   </style>
 </head>
 <body>
-  <h1>🚀 My website is live!</h1>
-  <p>Created on January 2026 by Steven from Jacksonville</p>
-  <p>This is hosted for free on GitHub Pages.</p>
+  <header>
+    <h1>📊 AP Lab Reports</h1>
+    <p>A collection of laboratory reports and experiments</p>
+  </header>
+  
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#reports">Reports</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  
+  <div class="container">
+    <!-- Home Section -->
+    <div id="home" class="section">
+      <h2>Welcome</h2>
+      <p>This website showcases my AP Laboratory Reports. Each report documents detailed experiments, findings, and analysis conducted in the AP Science program. Navigate through the reports section to explore different lab assignments and their outcomes.</p>
+    </div>
+    
+    <!-- Reports Section -->
+    <div id="reports" class="section">
+      <h2>Laboratory Reports</h2>
+      <div class="lab-grid">
+        <div class="lab-card">
+          <h3>Lab 1: Measurement & Error Analysis</h3>
+          <div class="lab-date">September 2025</div>
+          <p>Exploring measurement precision, accuracy, and sources of experimental error in standard laboratory conditions.</p>
+          <a href="Lab1.pdf" class="btn" target="_blank">View Report</a>
+        </div>
+        
+        <div class="lab-card">
+          <h3>Lab 2: Density Determination</h3>
+          <div class="lab-date">October 2025</div>
+          <p>Investigation of material density through various measurement techniques and calculations of unknown substances.</p>
+          <a href="Lab2.pdf" class="btn" target="_blank">View Report</a>
+        </div>
+        
+        <div class="lab-card">
+          <h3>Lab 3: Calorimetry Experiment</h3>
+          <div class="lab-date">November 2025</div>
+          <p>Study of heat transfer and energy changes in physical and chemical processes using calorimetric methods.</p>
+          <a href="Lab3.pdf" class="btn" target="_blank">View Report</a>
+        </div>
+        
+        <div class="lab-card">
+          <h3>Lab 4: Chemical Reactions</h3>
+          <div class="lab-date">December 2025</div>
+          <p>Analysis of reaction rates, equilibrium, and stoichiometry through systematic observation and data collection.</p>
+          <a href="Lab4.pdf" class="btn" target="_blank">View Report</a>
+        </div>
+        
+        <div class="lab-card">
+          <h3>Lab 5: Molecular Structure</h3>
+          <div class="lab-date">January 2026</div>
+          <p>Investigation of molecular bonding, polarity, and geometric structures using computational and experimental approaches.</p>
+          <a href="Lab5.pdf" class="btn" target="_blank">View Report</a>
+        </div>
+        
+        <div class="lab-card">
+          <h3>Lab 6: Spectroscopy Analysis</h3>
+          <div class="lab-date">January 2026</div>
+          <p>Examination of light absorption and emission spectra to identify substances and understand electron transitions.</p>
+          <a href="Lab6.pdf" class="btn" target="_blank">View Report</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- About Section -->
+    <div id="about" class="section">
+      <h2>About These Reports</h2>
+      <p>Each laboratory report includes:</p>
+      <ul style="margin-left: 2rem; margin-top: 1rem;">
+        <li style="margin-bottom: 0.5rem;"><strong>Objective:</strong> Clear statement of the experiment's purpose</li>
+        <li style="margin-bottom: 0.5rem;"><strong>Methodology:</strong> Detailed procedures and equipment used</li>
+        <li style="margin-bottom: 0.5rem;"><strong>Results:</strong> Data tables, graphs, and observations</li>
+        <li style="margin-bottom: 0.5rem;"><strong>Analysis:</strong> Interpretation of findings and calculations</li>
+        <li style="margin-bottom: 0.5rem;"><strong>Conclusion:</strong> Summary and evaluation of results</li>
+      </ul>
+    </div>
+    
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+      <h2>Get in Touch</h2>
+      <p>Have questions about these lab reports or want to collaborate? Feel free to reach out!</p>
+      <p style="margin-top: 1rem;">
+        <strong>Email:</strong> <a href="mailto:your.email@example.com" style="color: #44ff88; text-decoration: none;">your.email@example.com</a>
+      </p>
+    </div>
+  </div>
+  
+  <footer>
+    <p>&copy; 2026 AP Lab Reports. All rights reserved.</p>
+    <p>Hosted on GitHub Pages</p>
+  </footer>
 </body>
 </html>
